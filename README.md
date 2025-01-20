@@ -1,1 +1,1 @@
-Not finished yet, still need to add things for the projects side and finish optimizing for phones. also still don't really like how it looks
+A portfolio site for myself. I am building this project in vanilla HTML/CSS/JS to expand my knowledge in these languages before moving onto more advanced methods.
