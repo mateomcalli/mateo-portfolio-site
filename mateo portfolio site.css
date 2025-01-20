@@ -1,12 +1,15 @@
-html, body{
+html, body {
   background-color: var(--background-color1);
   margin: 0;
-  padding: 0;
+  overflow-x: hidden;
+  padding-bottom: 100vh;
 }
-*{
+
+* {
   scroll-behavior: smooth;
 }
-:root{
+
+:root {
   font-family: source-serif-pro, Inter, sans-serif;
   font-feature-settings: 'liga' 1, 'calt' 1;
   font-size: 18px;
@@ -14,184 +17,229 @@ html, body{
   --text-color2: #9f5927;
   --background-color1: #232323;
 }
-a{
+
+a {
   text-decoration: none;
   color: inherit;
 }
-#navbar{
+
+#navbar {
   background-color: var(--background-color1);
-  width: 100vw;
+  width: 100%;
   height: 60px;
   position: fixed;
+  top: 0;
+  left: 0;
   color: var(--text-color2);
   display: flex;
-  flex-direction: row;
+  justify-content: space-around;
+  align-items: center;
+  padding: 0px;
   z-index: 1;
+  transition: 0.2s ease;
 }
-p{
-  margin-right: 20px;
+
+.about_me {
+  padding-left: 10px;
 }
-#name{
-  font-size: 1.25em;
-  margin-top: 15px;
-  margin-right: 30px;
-  margin-left: 20%;
+
+.about_me:hover, .education:hover, .projects:hover {
+  text-decoration: underline;
 }
-.social-icons{
-  position: absolute;
+
+.about_me, .education, .projects {
+  font-style: italic;
+}
+
+.left {
+  height: 100%;
+  display: flex;
+  gap: 20px;
+  align-items: center;
+}
+
+.social-icons {
   display: flex;
   gap: 15px;
   font-size: 1.5em;
-  margin-top: 13px;
-  margin-left: 72%;
+  align-items: center;
+  margin-right: 3vw;
 }
-#welcome-section{
-  color: var(--text-color1);
-  position: absolute;
-  margin-top: 40px;
-  width: 55%;
-  height: calc(100vh-60px);
+
+#name {
+  font-size: 1.35em;
+  padding: 0px;
 }
-#description{
-  margin-left: 4%;
-  text-align: left;
+
+#name:hover {
+  cursor: pointer;
 }
-.headers{
-  scroll-margin-top: 80px;
-  text-align: left;
-  text-align: center;
+
+/* Below navbar */
+
+#landing {
+  display: flex;
+  justify-content: space-between;
+  gap: 0px;
+  margin: 25vh auto 0;
+  margin-left: 13%;
+  width: 64vw;
 }
-.gap{
-  margin-bottom: 30px;
-}
-.timeframe{
-  font-family: Inter;
-  font-size: 0.8em;
-}
-.timeframe-one{
-  margin-bottom: -5px;
-}
-.thin-line{
-  height: 1px;
-  background-color: var(--text-color1);
-  position: relative;
-  width: 130px;
-  left: 130px;
-  bottom: 4px;
-}
-#welcome-section a{
-  color: var(--text-color2);
-  position: absolute;
-  margin-left: 4%;
-  padding-top: -15px;
-}
-#projects{
-  position: fixed;
-  margin-left: 57%;
-  width: 40%;
-  height: calc(95vh - 80px);
-  margin-top: 75px;
+
+#landing_text {
   display: flex;
   flex-direction: column;
-  gap: 40px;
-  /* Consider creating a new way to show the projects, with a list 
-  already displayed that creates this glassy background on hover.
-  This would require you to change the HTML and the whole structure. */
+  margin: 1% auto 0;
+  width: 50%;
+  color: var(--text-color1);
+  text-align: center;
 }
-.project{
-  border: 1px solid rgba(255, 255, 255, 0.1);
+
+.polaroid {
+  width: fit-content;
+  padding: 10px 10px 25px 10px;
+  background-color: white;
+  border: 1px solid black;
+  display: inline-block;
+}
+
+.polaroid .image {
+  display: block;
+  border: 1px solid black;
+  width: 200px;
+  height: 260px;
+}
+
+.main_header {
+  margin-bottom: 0px;
+}
+
+.section_one {
+  color: var(--background-color1);
+  height: calc(100vh - 60px);
+  width: 100vw;
+  margin-top: 60px;
+  border: 1px solid #232323;
+}
+
+/* Below landing page */
+
+#navbar.translucent {
+  background: rgba(35, 35, 35, 0.5);
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px);
+  transition: background-color 0.2s ease, color 0.2s ease;
+  color: white;
+}
+
+.glass {
+  background: radial-gradient(rgba(235, 150, 115, 0.4), rgba(80, 96, 183, 0.4));
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px);
+  border: 1px solid rgba(255, 255, 255, 0.18);
+}
+
+#about_me {
+  display: flex;
+  width: 100vw;
+  height: 100vh;
+  text-align: center;
+  scroll-margin-top: 0;
+}
+
+.window {
   border-radius: 20px;
-  background-color: rgba(128, 128, 128, 0.1);
-  height: 50%;
-  visibility: hidden;
+  border: 1px solid rgba(255, 255, 255, 0.18);
+  box-shadow: 0 8px 32px 0 rgba(0, 0, 0, 0.37);
+  width: 75%;
+  height: 55%;
+  margin: 22vh auto 0;
 }
-.project:hover{
-  visibility: visible;
+
+.about_me_header {
+  color: rgba(255, 255, 255, 0.623);
+  margin-top: 5.5%;
 }
-li{
-  color:white;
-  position: absolute;
-  top: 5%;
+
+.about_me_text {
+  display: flex;
+  width: 80%;
+  margin: 0 auto;
+  color: rgba(255, 255, 255, 0.623);
+  overflow-wrap: break-word;
+}
+
+@media (max-width: 1150px) {
+  #landing { 
+    width: 85vw;
+    margin-left: 0%;
+  }
+
+  #landing_text {
+    margin-left: 12%;
+  }
+}
+
+@media (max-width: 850px) {
+  #landing {
+    flex-direction: column;
+    margin: 6% auto 0;
+  }
+
+  #landing_text {
+    width: 75%;
+    margin-bottom: 10%;
+  }
+
+  img, .polaroid {
+    margin: 0 auto;
+  }
   
-}
-@media (max-width: 1600px){
-  #name{
-    margin-left: 16%;
-  }
-  .social-icons{
-    margin-left: 76%;
+  .window {
+    height: 65%;
+    margin-top: 16vh;
   }
 }
-@media (max-width: 1000px){
-  #name{
-    margin-left: 10%;
+
+@media (max-width: 650px) {
+  #landing {
+    margin-top: 4%;
   }
-  .social-icons{
-    margin-left: 78%;
+  #landing_text {
+    margin-bottom: 10%;
   }
-}
-@media (max-width: 900px){
-  #name{
-    margin-left: 5%;
-  }
-  .social-icons{
-    margin-left: 78%;
-  }
-  .headers{
-    font-size: 28px;
-  }
-  #welcome-section a{
-    padding-bottom: 50px;
-  }
-}
-@media (max-width: 700px){
-  #navbar p a{
+
+  .about_me, .education, .projects {
     display: none;
   }
-  #name{
-    margin-left: 5%;
-  }
-  .social-icons{
-    margin-left: 79%;
-  }
-  #welcome-section{
-    width: 100%;
-  }
-  #projects{
-    position: absolute;
-    margin: 0 auto;
-    width: 80%;
-    left: 9%;
-    top: 100%;
+  
+  .window {
+    height: 65%;
+    margin-top: 15vh;
   }
 }
-@media (max-width: 650px){
-  .social-icons{
-    margin-left: 77%;
+
+@media (max-width: 600px) {
+  .window {
+    height: 70%;
+    margin-top: 13vh;
   }
 }
-@media (max-width: 600px){
-  .social-icons{
-    margin-left: 75%;
+
+@media (max-width: 550px) {
+  .window {
+    height: 75%;
+    margin-top: 9vh;
   }
 }
-@media (max-width: 550px){
-  .social-icons{
-    margin-left: 73%;
+
+@media (max-width: 450px) {
+  .social-icons { 
+    display: none;
   }
-}
-@media (max-width: 500px){
-  .social-icons{
-    margin-left: 71%;
-  }
-}
-@media (max-width: 450px){
-  .social-icons{
-    margin-left: 69%;
-  }
-}
-@media (max-width: 400px){
-  .social-icons{
-    margin-left: 67%;
+
+  .window {
+    height: 85%;
+    margin-top: 7vh;
   }
 }
