@@ -8,37 +8,59 @@
     <link rel="preconnect" href="https://rsms.me/">
     <link rel="stylesheet" href="https://rsms.me/inter/inter.css"> 
     <link rel="stylesheet" href="mateo portfolio site.css"/>
-    <title>Mateo</title>
+    <title>Mateo McAllister | Personal Website</title>
   </head>
   <body>
     <nav id="navbar">
-      <p id="name">Mateo McAllister</p>
-      <p><a href="#about_me">About me</a></p>
-      <p><a href="#experience">Experience</a></p>
-      <p><a href="#projects">Projects</a></p>
+      <div class="left">
+      <p id="name"><a href="#">Mateo McAllister</a></p>
+      <p class="about_me"><a href="#about_me">About me</a></p>
+      <p class="education"><a href="#education">Education</a></p>
+      <p class="projects"><a href="#projects">Projects</a></p>
+      </div>
         <div class="social-icons">
         <a target="_blank" href="mailto:mateomcallisterschool@gmail.com"><i class="fas fa-envelope"></i></a>
         <a target="_blank" href="https://www.linkedin.com/in/mateo-mcallister-386b8b27a/"><i class="fab fa-linkedin-in"></i></a>
         <a target="_blank" href="https://github.com/mateomcalli"><i class="fab fa-github"></i></a>
       </div>
     </nav>
-   <div id="welcome-section">
-      <h1 class="headers one" id="about_me">Hey there, nice to meet you.</h1>
-      <p id="description" class="gap">My name is Mateo McAllister, and I am an incoming freshman to the University of Florida. I'm from Miami Beach, and I am interested in front-end web development and the creative expression that comes with designing and implementing software. I aspire to have a career where I can express my creativity, evoking emotions in others through effective design choice. I hope to expand my knowledge and experience by pursuing a degree in Computer Science.<br></br>When I'm not using my computer, I'm usually trying way too hard at a sport. I enjoy playing volleyball casually with friends, and I hope to involve myself in my school's intramural program for basketball and soccer.</p>
-      <h1 class="headers" id="experience">Experience</h1>
-      <p id="description" class="timeframe timeframe-one">2020 - 2024</p>
-      <div class="thin-line"></div>
-      <p id="description" class="resume-title">Education - Miami Beach Senior High School</p>
-      <p id="description">• Graduated with Cum Laude, maintained and secured a weighted GPA of 4.8. Earned a total of 40 college credits through Advanced Placement courses.</p>
-      <p id="description">• Earned two Adobe Certified Professional titles for graphic and video design, one for Adobe Photoshop and the other for Adobe Premiere Pro.</p>
-      <a target="_blank" href="https://drive.google.com/file/d/1WBHUzvdZIjJnTrkG50CPMuOw2GQuYdLz/view?usp=drive_link">View full resume as PDF</a>
+    <div class="section_one">
+    <div id="landing">
+      <div id="landing_text">
+        <h1 class="main_header">Hello, I'm Mateo</h1>
+        <p class="main_text">A student who enjoys creative web design and development.</p>
+      </div>
+      <div class="polaroid">
+        <img class="image" src="https://i.imgur.com/GaUkkZh.jpeg">
+      </div>
     </div>
-    <div id="projects">
-      <div class="project p1"></div>
-      <li>sdadas</li>
-      <div class="project p2"></div>
-      <div class="project p3"></div>
-      <div class="project p4"></div>
+    </div>
+    <div id="about_me" class="glass">
+      <div class="window">
+      <h1 class="about_me_header">About me</h1>
+        <p class="about_me_text">My name is Mateo McAllister, and I am a freshman at the University of Florida. I'm from Miami Beach, and I am interested in front-end web development and the creative expression that comes with designing and implementing software. I aspire to have a career where I can express my creativity, evoking emotions in others through effective design choice.<br></br>When I'm not using my computer, I'm usually trying way too hard at a sport. I enjoy playing volleyball casually with friends, and I like competing in my school's intramural programs.</p><br></br>
+      </div>
+    </div>
+    <script>
+      const navbar = document.getElementById("navbar");
+      const aboutMe = document.getElementById("about_me");
+      window.addEventListener("scroll", () => {
+          const aboutMeTop = aboutMe.getBoundingClientRect().top;
+          const adjustedTop = aboutMeTop - 59;
+          const aboutMeBottom = aboutMe.getBoundingClientRect().bottom;
+          const adjustedBottom = aboutMeBottom - 59;
+          if (adjustedTop <= 0) {
+              navbar.classList.add("translucent");
+          } else {
+              navbar.classList.remove("translucent");
+          }
+          if (adjustedBottom <= 0) {
+              navbar.classList.remove("translucent");
+          }
+      });
+    </script>
+  </body>
+</html>
     </div>
   </body>
 </html>
