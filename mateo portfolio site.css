@@ -10,7 +10,7 @@ html, body {
 }
 
 :root {
-  font-family: source-serif-pro, Inter, sans-serif;
+  font-family: Inter, source-serif-pro, sans-serif;
   font-feature-settings: 'liga' 1, 'calt' 1;
   font-size: 18px;
   --text-color1: grey;
@@ -45,10 +45,6 @@ a {
 
 .about_me:hover, .education:hover, .projects:hover {
   text-decoration: underline;
-}
-
-.about_me, .education, .projects {
-  font-style: italic;
 }
 
 .left {
@@ -137,36 +133,77 @@ a {
   backdrop-filter: blur(10px);
   -webkit-backdrop-filter: blur(10px);
   border: 1px solid rgba(255, 255, 255, 0.18);
-}
-
-#about_me {
-  display: flex;
   width: 100vw;
   height: 100vh;
-  text-align: center;
-  scroll-margin-top: 0;
 }
 
-.window {
+#ab_content {
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+  scroll-margin-top: 0;
+  color: rgba(255, 255, 255, 0.623);
+  padding-top: 50px;
+  height: calc(50% - 62px);
+}
+
+.ab_text {
+  margin: 0 auto;
+  width: 80%;
+  color: rgba(255, 255, 255, 0.623);
+  overflow-wrap: break-word;
+  font-size: clamp(1rem, 2.5vw, 1.2rem);
+}
+
+#lower_content {
+  display: table;
+  align-items: center;
+  color: rgba(255, 255, 255, 0.623);
+  width: 100%;
+  text-align: center;
+  height: 50%;
+}
+
+.techs {
+  display: table-cell;
+  width: 50%;
+}
+
+.t_header { 
+  padding-bottom: 16px;
+  font-size: 24px;
+}
+
+.t_content {
   border-radius: 20px;
   border: 1px solid rgba(255, 255, 255, 0.18);
   box-shadow: 0 8px 32px 0 rgba(0, 0, 0, 0.37);
-  width: 75%;
-  height: 55%;
-  margin: 22vh auto 0;
-}
-
-.about_me_header {
-  color: rgba(255, 255, 255, 0.623);
-  margin-top: 5.5%;
-}
-
-.about_me_text {
-  display: flex;
   width: 80%;
+  height: 65%;
   margin: 0 auto;
-  color: rgba(255, 255, 255, 0.623);
-  overflow-wrap: break-word;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  overflow-wrap: normal;
+  padding-top: 2%;
+}
+
+.pictures {
+  display: table-cell;
+  width: 50%;
+}
+
+.tech_images {
+  width: 110px;
+  height: 110px;
+  border-radius: 10px;
+}
+
+/* Below about me */
+
+.education_header { 
+  color: var(--text-color2);
+  margin: 0 auto;
 }
 
 @media (max-width: 1150px) {
@@ -194,17 +231,13 @@ a {
   img, .polaroid {
     margin: 0 auto;
   }
-  
-  .window {
-    height: 65%;
-    margin-top: 16vh;
-  }
 }
 
 @media (max-width: 650px) {
   #landing {
     margin-top: 4%;
   }
+
   #landing_text {
     margin-bottom: 10%;
   }
@@ -212,34 +245,11 @@ a {
   .about_me, .education, .projects {
     display: none;
   }
-  
-  .window {
-    height: 65%;
-    margin-top: 15vh;
-  }
-}
 
-@media (max-width: 600px) {
-  .window {
-    height: 70%;
-    margin-top: 13vh;
-  }
-}
-
-@media (max-width: 550px) {
-  .window {
-    height: 75%;
-    margin-top: 9vh;
-  }
 }
 
 @media (max-width: 450px) {
   .social-icons { 
     display: none;
-  }
-
-  .window {
-    height: 85%;
-    margin-top: 7vh;
   }
 }
