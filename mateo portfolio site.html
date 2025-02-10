@@ -36,14 +36,27 @@
     </div>
     </div>
     <div id="about_me" class="glass">
-      <div class="window">
-      <h1 class="about_me_header">About me</h1>
-        <p class="about_me_text">My name is Mateo McAllister, and I am a freshman at the University of Florida. I'm from Miami Beach, and I am interested in front-end web development and the creative expression that comes with designing and implementing software. I aspire to have a career where I can express my creativity, evoking emotions in others through effective design choice.<br></br>When I'm not using my computer, I'm usually trying way too hard at a sport. I enjoy playing volleyball casually with friends, and I like competing in my school's intramural programs.</p><br></br>
+      <div id="ab_content">
+        <h1 class="ab_header">About me</h1>
+        <p class="ab_text">My name is Mateo McAllister, and I am a freshman at the University of Florida. I'm from Miami Beach, and I am interested in front-end web development and the creative expression that comes with designing and implementing software. I aspire to have a career where I can express my creativity, evoking emotions in others through effective design choice.<br></br>When I'm not using my computer, I'm usually trying way too hard at a sport. I enjoy playing volleyball casually with friends, and I like competing in my school's intramural programs.</p><br></br>
+      </div>
+      <div id="lower_content">
+        <div class="techs">
+          <h1 class="t_header">Some technologies I've used:</h1>
+          <div class="t_content">
+            <img class="tech_images" src="https://i.imgur.com/vkfzrDn.png">
+            <img class="tech_images" src="https://i.imgur.com/0XW1YoL.png">
+            <img class="tech_images" src="https://i.imgur.com/BZSxA3S.png">
+            <img class="tech_images" src="https://i.imgur.com/tylhg5o.png">
+          </div>
+        </div>
+        <div class="pictures"></div>
       </div>
     </div>
     <script>
       const navbar = document.getElementById("navbar");
       const aboutMe = document.getElementById("about_me");
+      
       window.addEventListener("scroll", () => {
           const aboutMeTop = aboutMe.getBoundingClientRect().top;
           const adjustedTop = aboutMeTop - 59;
@@ -59,8 +72,9 @@
           }
       });
     </script>
-  </body>
-</html>
+    <div id="education">
+      <h1 class="education_header">Education</h1>
+      <p class="education_text">Lorem ispum</p>
     </div>
   </body>
 </html>
